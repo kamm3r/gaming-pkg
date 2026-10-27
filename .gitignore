@@ -1,0 +1,3 @@
+srpm/
+*.rpm
+__pycache__/

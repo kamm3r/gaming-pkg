@@ -1,0 +1,25 @@
+{
+  "falcond": {
+    "url": "https://git.pika-os.com/general-packages/falcond.git",
+    "commit": "09639985ffd781b34f540074b04292abb24f4d32",
+    "downloads": [
+      {
+        "url": "https://ziglang.org/download/0.16.0/zig-x86_64-linux-0.16.0.tar.xz",
+        "filename": "zig-x86_64-linux-0.16.0.tar.xz",
+        "sha256": "70e49664a74374b48b51e6f3fdfbf437f6395d42509050588bd49abe52ba3d00"
+      }
+    ]
+  },
+  "falcond-gui": {
+    "url": "https://git.pika-os.com/custom-gui-packages/falcond-gui.git",
+    "commit": "56a60d693d4d960ca87e21c14a819b2572c526c2"
+  },
+  "falcond-profiles": {
+    "url": "https://github.com/PikaOS-Linux/falcond-profiles.git",
+    "commit": "2c521cbe01a3fb092ef3ddf61b111a600ef9f673"
+  },
+  "udev-joystick-blacklist": {
+    "url": "https://github.com/denilsonsa/udev-joystick-blacklist.git",
+    "commit": "1c5c9ccb69ea4ae42251aaa4c5a40a54766e6551"
+  }
+}
