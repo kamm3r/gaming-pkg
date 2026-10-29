@@ -1,6 +1,6 @@
 Name:           moonlight-qt
 Version:        6.2.0
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        Game streaming client for Sunshine and NVIDIA GameStream
 License:        GPL-3.0-or-later AND LGPL-2.1-or-later AND MIT AND Zlib
 URL:            https://github.com/moonlight-stream/moonlight-qt
@@ -50,6 +50,9 @@ host PC separately; this package is the client only.
 
 %prep
 %autosetup
+# Preserve component paths so identically named license files do not collide.
+mkdir licenses
+cp --parents LICENSE h264bitstream/LICENSE moonlight-common-c/moonlight-common-c/LICENSE.txt moonlight-common-c/moonlight-common-c/enet/LICENSE moonlight-common-c/moonlight-common-c/nanors/LICENSE qmdnsengine/qmdnsengine/LICENSE.txt app/SDL_GameControllerDB/LICENSE licenses/
 
 %build
 %set_build_flags
@@ -69,13 +72,7 @@ grep -q -- '-DHAVE_LIBPLACEBO_VULKAN' app/Makefile.Release
 grep -q -- '-DHAS_WAYLAND' app/Makefile.Release
 
 %files
-%license LICENSE
-%license h264bitstream/LICENSE
-%license moonlight-common-c/moonlight-common-c/LICENSE.txt
-%license moonlight-common-c/moonlight-common-c/enet/LICENSE
-%license moonlight-common-c/moonlight-common-c/nanors/LICENSE
-%license qmdnsengine/qmdnsengine/LICENSE.txt
-%license app/SDL_GameControllerDB/LICENSE
+%license licenses/
 %doc README.md
 %{_bindir}/moonlight
 %{_datadir}/applications/com.moonlight_stream.Moonlight.desktop
@@ -83,6 +80,9 @@ grep -q -- '-DHAS_WAYLAND' app/Makefile.Release
 %{_datadir}/metainfo/com.moonlight_stream.Moonlight.appdata.xml
 
 %changelog
+* Thu Oct 29 2026 kamm3r - 6.2.0-3
+- Preserve distinct license notices for bundled source components.
+
 * Thu Oct 29 2026 kamm3r - 6.2.0-2
 - Require libavformat headers included by libplacebo Vulkan integration.
 
