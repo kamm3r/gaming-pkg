@@ -21,5 +21,10 @@
   "udev-joystick-blacklist": {
     "url": "https://github.com/denilsonsa/udev-joystick-blacklist.git",
     "commit": "1c5c9ccb69ea4ae42251aaa4c5a40a54766e6551"
+  },
+  "moonlight-qt": {
+    "url": "https://github.com/moonlight-stream/moonlight-qt.git",
+    "commit": "de2467e433821664cdd2224aad8c89a625be1ad9",
+    "submodules": true
   }
 }
