@@ -1,6 +1,6 @@
 Name:           moonlight-qt
 Version:        6.2.0
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Game streaming client for Sunshine and NVIDIA GameStream
 License:        GPL-3.0-or-later AND LGPL-2.1-or-later AND MIT AND Zlib
 URL:            https://github.com/moonlight-stream/moonlight-qt
@@ -18,6 +18,7 @@ BuildRequires:  pkgconfig(openssl)
 BuildRequires:  pkgconfig(sdl2)
 BuildRequires:  pkgconfig(SDL2_ttf)
 BuildRequires:  pkgconfig(opus)
+BuildRequires:  pkgconfig(libavformat)
 BuildRequires:  pkgconfig(libavcodec)
 BuildRequires:  pkgconfig(libavutil)
 BuildRequires:  pkgconfig(libswscale)
@@ -82,6 +83,9 @@ grep -q -- '-DHAS_WAYLAND' app/Makefile.Release
 %{_datadir}/metainfo/com.moonlight_stream.Moonlight.appdata.xml
 
 %changelog
+* Thu Oct 29 2026 kamm3r - 6.2.0-2
+- Require libavformat headers included by libplacebo Vulkan integration.
+
 * Thu Oct 29 2026 kamm3r - 6.2.0-1
 - Package the stable client with system Qt 6, FFmpeg, VA-API, Vulkan and Wayland.
 - Include the release-pinned recursive submodules in the source RPM.
