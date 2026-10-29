@@ -34,3 +34,5 @@ For an existing installation from another repository, use a reviewed `dnf distro
 Installation does not enable Falcond. Configure it and enable its service explicitly if desired. Upstream profiles can contain performance settings and executable hooks; review custom profiles before using them.
 
 Moonlight uses the system FFmpeg libraries. Available codecs and hardware decoding depend on the installed FFmpeg and GPU driver stack; keep the existing Nobara/RPM Fusion codec setup. It does not install Sunshine or enable a service. Launch `moonlight` and pair it with the host.
+
+Moonlight publication is tracked in [the build record](.copr/publications/moonlight-qt-2026-10-29.json). The clean build produced `6.2.0-3.fc44`; COPR publication verification remains pending.

@@ -1,0 +1,24 @@
+{
+  "package": "moonlight-qt",
+  "version_release": "6.2.0-3.fc44",
+  "chroot": "fedora-44-x86_64",
+  "source_commit": "4d56f9619092749ceb2f72f3379ab33a68ae0899",
+  "upstream_commit": "de2467e433821664cdd2224aad8c89a625be1ad9",
+  "build_id": 11223032,
+  "build_url": "https://copr.fedorainfracloud.org/coprs/build/11223032/",
+  "api_state": "running",
+  "checked_at": "2026-10-29T11:18:33.213249+00:00",
+  "publication_verified": false,
+  "validation": [
+    "SRPM created successfully",
+    "511 source blobs match pinned upstream and recursive submodule commits",
+    "Clean Fedora 44 binary build log completed rpmbuild and RPMResults successfully",
+    "Desktop-file validation and FFmpeg/VA-API/Vulkan/Wayland feature checks passed",
+    "Binary build network access disabled"
+  ],
+  "note": "COPR API still running; exact package not yet present in primary repository metadata. Do not describe as published until both checks pass. Streaming on real GPU hardware has not been tested.",
+  "superseded_builds": {
+    "11222863": "failed: missing libavformat development header",
+    "11223029": "canceled: superseded to preserve distinct component license notices"
+  }
+}
