@@ -6,9 +6,9 @@
   "upstream_commit": "de2467e433821664cdd2224aad8c89a625be1ad9",
   "build_id": 11223032,
   "build_url": "https://copr.fedorainfracloud.org/coprs/build/11223032/",
-  "api_state": "running",
-  "checked_at": "2026-10-29T11:18:33.213249+00:00",
-  "publication_verified": false,
+  "api_state": "succeeded",
+  "checked_at": "2026-10-30T05:11:44.940168+00:00",
+  "publication_verified": true,
   "validation": [
     "SRPM created successfully",
     "511 source blobs match pinned upstream and recursive submodule commits",
@@ -16,9 +16,18 @@
     "Desktop-file validation and FFmpeg/VA-API/Vulkan/Wayland feature checks passed",
     "Binary build network access disabled"
   ],
-  "note": "COPR API still running; exact package not yet present in primary repository metadata. Do not describe as published until both checks pass. Streaming on real GPU hardware has not been tested.",
+  "note": "COPR build succeeded; exact 6.2.0-3.fc44 version and matching HTTP Content-Length verified in Fedora 44 x86_64 primary metadata. Streaming on real GPU hardware has not been tested.",
   "superseded_builds": {
     "11222863": "failed: missing libavformat development header",
     "11223029": "canceled: superseded to preserve distinct component license notices"
+  },
+  "repository_artifact": {
+    "version_release": "6.2.0-3.fc44",
+    "location": "https://download.copr.fedorainfracloud.org/results/kammer/gaming/fedora-44-x86_64/Packages/m/moonlight-qt-6.2.0-3.fc44.x86_64.rpm",
+    "metadata_size": 1240590,
+    "sha256": "397f7e2d661b7121986698d1a73771409388c70065a6d466f9efd44ce30fa63f",
+    "in_metadata": true,
+    "http_size": 1240590,
+    "size_matches": true
   }
 }

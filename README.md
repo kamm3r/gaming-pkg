@@ -35,4 +35,6 @@ Installation does not enable Falcond. Configure it and enable its service explic
 
 Moonlight uses the system FFmpeg libraries. Available codecs and hardware decoding depend on the installed FFmpeg and GPU driver stack; keep the existing Nobara/RPM Fusion codec setup. It does not install Sunshine or enable a service. Launch `moonlight` and pair it with the host.
 
-Moonlight publication is tracked in [the build record](.copr/publications/moonlight-qt-2026-10-29.json). The clean build produced `6.2.0-3.fc44`; COPR publication verification remains pending.
+Moonlight `6.2.0-3.fc44` is published: COPR build [11223032](https://copr.fedorainfracloud.org/coprs/build/11223032/) succeeded, and its exact version and download size are verified in Fedora 44 x86_64 repository metadata. [Build record](.copr/publications/moonlight-qt-2026-10-29.json).
+
+The October 30 check against the original creators found no newer stable releases or tracked profile/rule commits. Every packaged version is already available in COPR with matching download sizes. No new builds were needed. See [the upstream and publication check](.copr/publications/2026-10-30.json) for pinned creator commits, release references, and build evidence.

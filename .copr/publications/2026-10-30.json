@@ -1,0 +1,159 @@
+{
+  "checked_at": "2026-10-30T05:11:44.940168+00:00",
+  "creator_sources": {
+    "moonlight-qt": {
+      "url": "https://github.com/moonlight-stream/moonlight-qt",
+      "release_url": "https://github.com/moonlight-stream/moonlight-qt/releases/tag/v6.2.0",
+      "latest_stable_tag": "v6.2.0",
+      "stable_commit": "de2467e433821664cdd2224aad8c89a625be1ad9"
+    },
+    "falcond": {
+      "url": "https://git.pika-os.com/general-packages/falcond.git",
+      "head": "98f92fb093fecc7cfa9d728fd015b1ef2942ac37",
+      "latest_stable_tag": "v2.0.14",
+      "stable_commit": "09639985ffd781b34f540074b04292abb24f4d32"
+    },
+    "falcond-gui": {
+      "url": "https://git.pika-os.com/custom-gui-packages/falcond-gui.git",
+      "head": "ab626baa17167b3c25bf7f114004ee33ba4b70c8",
+      "latest_stable_tag": "v1.0.3",
+      "stable_commit": "56a60d693d4d960ca87e21c14a819b2572c526c2"
+    },
+    "falcond-profiles": {
+      "url": "https://github.com/PikaOS-Linux/falcond-profiles.git",
+      "head": "2c521cbe01a3fb092ef3ddf61b111a600ef9f673",
+      "latest_stable_tag": null,
+      "stable_commit": null
+    },
+    "udev-joystick-blacklist": {
+      "url": "https://github.com/denilsonsa/udev-joystick-blacklist.git",
+      "head": "1c5c9ccb69ea4ae42251aaa4c5a40a54766e6551",
+      "latest_stable_tag": null,
+      "stable_commit": null
+    }
+  },
+  "publication_artifacts": {
+    "falcond": {
+      "version_release": "2.0.14-2.fc44",
+      "location": "https://download.copr.fedorainfracloud.org/results/kammer/gaming/fedora-44-x86_64/Packages/f/falcond-2.0.14-2.fc44.x86_64.rpm",
+      "metadata_size": 428774,
+      "sha256": "a460e1649b688c9994bb833ee1f673e4146cdf70a01309dee6d543583eff2d94",
+      "in_metadata": true,
+      "http_size": 428774,
+      "size_matches": true
+    },
+    "falcond-gui": {
+      "version_release": "1.0.3-2.fc44",
+      "location": "https://download.copr.fedorainfracloud.org/results/kammer/gaming/fedora-44-x86_64/Packages/f/falcond-gui-1.0.3-2.fc44.x86_64.rpm",
+      "metadata_size": 1289295,
+      "sha256": "f03e6c7e2dd00ddc2842728b284dc34fa75385bfcce4c5abc8e0000c1f2e8b5c",
+      "in_metadata": true,
+      "http_size": 1289295,
+      "size_matches": true
+    },
+    "falcond-profiles": {
+      "version_release": "0^20260709git.2c521cb-2.fc44",
+      "location": "https://download.copr.fedorainfracloud.org/results/kammer/gaming/fedora-44-x86_64/Packages/f/falcond-profiles-0^20260709git.2c521cb-2.fc44.noarch.rpm",
+      "metadata_size": 12978,
+      "sha256": "8c3e90d50af374639f2240352fd799b0384da11373ad21c2798aac71c334a4d0",
+      "in_metadata": true,
+      "http_size": 12978,
+      "size_matches": true
+    },
+    "udev-joystick-blacklist": {
+      "version_release": "0^20260415git1c5c9cc-3.fc44",
+      "location": "https://download.copr.fedorainfracloud.org/results/kammer/gaming/fedora-44-x86_64/Packages/u/udev-joystick-blacklist-0^20260415git1c5c9cc-3.fc44.noarch.rpm",
+      "metadata_size": 14043,
+      "sha256": "37ee4839d2068d4e34738dc576dcad4c310d0729e3e8b5169ab3ee8d874225de",
+      "in_metadata": true,
+      "http_size": 14043,
+      "size_matches": true
+    },
+    "udev-joystick-blacklist-rm": {
+      "version_release": "0^20260415git1c5c9cc-3.fc44",
+      "location": "https://download.copr.fedorainfracloud.org/results/kammer/gaming/fedora-44-x86_64/Packages/u/udev-joystick-blacklist-rm-0^20260415git1c5c9cc-3.fc44.noarch.rpm",
+      "metadata_size": 14344,
+      "sha256": "fd09df27ebc96cd587276fd35946bb76fbec8d7f1aa1a99b251f5c4696910988",
+      "in_metadata": true,
+      "http_size": 14344,
+      "size_matches": true
+    },
+    "moonlight-qt": {
+      "version_release": "6.2.0-3.fc44",
+      "location": "https://download.copr.fedorainfracloud.org/results/kammer/gaming/fedora-44-x86_64/Packages/m/moonlight-qt-6.2.0-3.fc44.x86_64.rpm",
+      "metadata_size": 1240590,
+      "sha256": "397f7e2d661b7121986698d1a73771409388c70065a6d466f9efd44ce30fa63f",
+      "in_metadata": true,
+      "http_size": 1240590,
+      "size_matches": true
+    }
+  },
+  "successful_builds": {
+    "moonlight-qt": {
+      "id": 11223032,
+      "state": "succeeded",
+      "source_package": {
+        "name": "moonlight-qt",
+        "url": "https://download.copr.fedorainfracloud.org/results/kammer/gaming/srpm-builds/11223032/moonlight-qt-6.2.0-3.fc44.src.rpm",
+        "version": "6.2.0-3"
+      },
+      "chroots": [
+        "fedora-44-x86_64"
+      ]
+    },
+    "udev-joystick-blacklist": {
+      "id": 11213577,
+      "state": "succeeded",
+      "source_package": {
+        "name": "udev-joystick-blacklist",
+        "url": "https://download.copr.fedorainfracloud.org/results/kammer/gaming/srpm-builds/11213577/udev-joystick-blacklist-0^20260415git1c5c9cc-3.src.rpm",
+        "version": "0^20260415git1c5c9cc-3"
+      },
+      "chroots": [
+        "fedora-44-x86_64"
+      ]
+    },
+    "falcond-profiles": {
+      "id": 11213576,
+      "state": "succeeded",
+      "source_package": {
+        "name": "falcond-profiles",
+        "url": "https://download.copr.fedorainfracloud.org/results/kammer/gaming/srpm-builds/11213576/falcond-profiles-0^20260709git.2c521cb-2.src.rpm",
+        "version": "0^20260709git.2c521cb-2"
+      },
+      "chroots": [
+        "fedora-44-x86_64"
+      ]
+    },
+    "falcond-gui": {
+      "id": 11213575,
+      "state": "succeeded",
+      "source_package": {
+        "name": "falcond-gui",
+        "url": "https://download.copr.fedorainfracloud.org/results/kammer/gaming/srpm-builds/11213575/falcond-gui-1.0.3-2.src.rpm",
+        "version": "1.0.3-2"
+      },
+      "chroots": [
+        "fedora-44-x86_64"
+      ]
+    },
+    "falcond": {
+      "id": 11213574,
+      "state": "succeeded",
+      "source_package": {
+        "name": "falcond",
+        "url": "https://download.copr.fedorainfracloud.org/results/kammer/gaming/srpm-builds/11213574/falcond-2.0.14-2.src.rpm",
+        "version": "2.0.14-2"
+      },
+      "chroots": [
+        "fedora-44-x86_64"
+      ]
+    }
+  },
+  "source_checksums": {},
+  "new_builds_submitted": [],
+  "outcome": "All packaged stable versions and tracked data commits already match their original creators. No version bumps or unchanged rebuilds required. Exact published versions and HTTP Content-Length verified.",
+  "policy": "Follow stable releases for versioned applications and pinned creator HEAD for profile/rule data. Unreleased application commits are recorded but not promoted to stable packages.",
+  "blockers": [],
+  "local_integration": {}
+}
