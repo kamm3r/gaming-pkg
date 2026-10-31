@@ -1,0 +1,60 @@
+{
+  "checked_at": "2026-10-31T17:04:47.697663+00:00",
+  "chroot": "fedora-44-x86_64",
+  "source_commit": "396741d93cc633b2211d2647668f3055fa8da9f9",
+  "packages": {
+    "obs-studio-plugin-vertical-canvas": {
+      "upstream": "https://github.com/Aitum/obs-vertical-canvas",
+      "release_url": "https://github.com/Aitum/obs-vertical-canvas/releases/tag/1.6.7",
+      "upstream_commit": "0d6317019cc299d28d1508b461ac902e57566c50",
+      "version_release": "1.6.7-2.fc44",
+      "build_id": 11235622,
+      "build_url": "https://copr.fedorainfracloud.org/coprs/build/11235622/",
+      "api_state": "succeeded",
+      "location": "https://download.copr.fedorainfracloud.org/results/kammer/gaming/fedora-44-x86_64/11235622-obs-studio-plugin-vertical-canvas/obs-studio-plugin-vertical-canvas-1.6.7-2.fc44.x86_64.rpm",
+      "sha256": "55a98b79da83537c1ba363e93756939f16b7340ad8fca532c32f158db122b869",
+      "http_size": 312002,
+      "metadata_size": 312002,
+      "size_matches": true
+    },
+    "obs-studio-plugin-aitum-multistream": {
+      "upstream": "https://github.com/Aitum/obs-aitum-multistream",
+      "release_url": "https://github.com/Aitum/obs-aitum-multistream/releases/tag/1.0.9",
+      "upstream_commit": "93add9859dfb280cae843bdf956b9a1a15d649e8",
+      "version_release": "1.0.9-2.fc44",
+      "build_id": 11235623,
+      "build_url": "https://copr.fedorainfracloud.org/coprs/build/11235623/",
+      "api_state": "succeeded",
+      "location": "https://download.copr.fedorainfracloud.org/results/kammer/gaming/fedora-44-x86_64/11235623-obs-studio-plugin-aitum-multistream/obs-studio-plugin-aitum-multistream-1.0.9-2.fc44.x86_64.rpm",
+      "sha256": "1d948654340546d05b1687c6cd789a7473d97b67ea0b0d7e133d7ec6df3ed37e",
+      "http_size": 167497,
+      "metadata_size": 167497,
+      "size_matches": true
+    },
+    "obs-studio-plugin-aitum-stream-suite": {
+      "upstream": "https://github.com/Aitum/obs-aitum-stream-suite",
+      "release_url": "https://github.com/Aitum/obs-aitum-stream-suite/releases/tag/1.2.5",
+      "upstream_commit": "8f337f807cc05375962724d73f63e2ac706ee285",
+      "version_release": "1.2.5-2.fc44",
+      "build_id": 11235624,
+      "build_url": "https://copr.fedorainfracloud.org/coprs/build/11235624/",
+      "api_state": "succeeded",
+      "location": "https://download.copr.fedorainfracloud.org/results/kammer/gaming/fedora-44-x86_64/11235624-obs-studio-plugin-aitum-stream-suite/obs-studio-plugin-aitum-stream-suite-1.2.5-2.fc44.x86_64.rpm",
+      "sha256": "24db825ffb39e556cea3a8c89d05be69e5e71cf18a6d3e6abc2db0e0d238aefc",
+      "http_size": 5463791,
+      "metadata_size": 5463791,
+      "size_matches": true
+    }
+  },
+  "validation": [
+    "SRPMs created from pinned upstream release commits",
+    "Clean Fedora 44 binary builds succeeded against Fedora obs-studio-devel 32.1.1 and Qt 6.11",
+    "%check verified plugin module, obs_module_load entry point and en-US locale",
+    "Exact versions present in Fedora 44 x86_64 repository metadata with matching download sizes"
+  ],
+  "superseded": {
+    "11235611-11235613": "failed: malformed short commit reference in submission",
+    "11235615-11235617": "succeeded under obs-* names; package entries deleted because Nobara's installed obs-studio-plugin-* packages provide those names"
+  },
+  "note": "Not tested inside a running OBS session. Nobara's nobara-updates repository has priority 50 versus this COPR's 99, so plain dnf upgrade keeps Nobara's older vertical-canvas and multistream builds."
+}
