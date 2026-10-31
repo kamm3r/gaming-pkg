@@ -1,9 +1,12 @@
-Name:           obs-aitum-multistream
+Name:           obs-studio-plugin-aitum-multistream
 Version:        1.0.9
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Stream to multiple platforms at once from OBS Studio
 License:        GPL-2.0-only
 URL:            https://github.com/Aitum/obs-aitum-multistream
+# Same name as Nobara's package so newer releases upgrade it in place.
+Provides:       obs-aitum-multistream = %{version}-%{release}
+Obsoletes:      obs-aitum-multistream < %{version}-%{release}
 # Generated from the pinned upstream release commit in sources.json.
 Source0:        %{name}-%{version}.tar.gz
 ExclusiveArch:  x86_64
@@ -52,5 +55,8 @@ nm -D --defined-only %{buildroot}%{_libdir}/obs-plugins/aitum-multistream.so | g
 %{_datadir}/obs/obs-plugins/aitum-multistream/
 
 %changelog
+* Sat Oct 31 2026 kamm3r - 1.0.9-2
+- Rename to the Nobara package name so it upgrades the installed plugin.
+
 * Sat Oct 31 2026 kamm3r - 1.0.9-1
 - Package the 1.0.9 release for Fedora OBS Studio.

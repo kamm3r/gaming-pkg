@@ -27,15 +27,15 @@
     "commit": "de2467e433821664cdd2224aad8c89a625be1ad9",
     "submodules": true
   },
-  "obs-aitum-multistream": {
-    "url": "https://github.com/Aitum/obs-aitum-multistream.git",
-    "commit": "93add9859dfb280cae843bdf956b9a1a15d649e8"
-  },
-  "obs-vertical-canvas": {
+  "obs-studio-plugin-vertical-canvas": {
     "url": "https://github.com/Aitum/obs-vertical-canvas.git",
     "commit": "0d6317019cc299d28d1508b461ac902e57566c50"
   },
-  "obs-aitum-stream-suite": {
+  "obs-studio-plugin-aitum-multistream": {
+    "url": "https://github.com/Aitum/obs-aitum-multistream.git",
+    "commit": "93add9859dfb280cae843bdf956b9a1a15d649e8"
+  },
+  "obs-studio-plugin-aitum-stream-suite": {
     "url": "https://github.com/Aitum/obs-aitum-stream-suite.git",
     "commit": "8f337f807cc05375962724d73f63e2ac706ee285"
   }

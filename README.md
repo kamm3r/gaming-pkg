@@ -6,7 +6,7 @@ Sources for [kammer/gaming COPR](https://copr.fedorainfracloud.org/coprs/kammer/
 - `falcond` 2.0.14: automatic per-game performance daemon; not enabled automatically. Do not run alongside conflicting GameMode services.
 - `falcond-gui` 1.0.3: GTK4 settings and status app.
 - `falcond-profiles`: pinned upstream game profiles and process exclusion list; local user profiles are kept in their own directory.
-- `obs-vertical-canvas` 1.6.7, `obs-aitum-multistream` 1.0.9 and `obs-aitum-stream-suite` 1.2.5: Aitum's OBS Studio plugins for a vertical canvas, streaming to several services at once, and a dock-based streaming layout. They are built against Fedora's `obs-studio-devel` and require an installed `obs-studio`.
+- `obs-studio-plugin-vertical-canvas` 1.6.7, `obs-studio-plugin-aitum-multistream` 1.0.9 and `obs-studio-plugin-aitum-stream-suite` 1.2.5: Aitum's OBS Studio plugins for a vertical canvas, streaming to several services at once, and a dock-based streaming layout. They are built against Fedora's `obs-studio-devel` and require an installed `obs-studio`. The first two use Nobara's package names, so these newer releases upgrade Nobara's copies in place.
 - `udev-joystick-blacklist` and `udev-joystick-blacklist-rm`: alternative udev rule sets for devices misidentified as joysticks. Install only one variant. These are hardware workarounds, not required gaming dependencies.
 
 Steam stays in RPM Fusion. Eden, games, firmware and console keys are not included.
@@ -37,7 +37,7 @@ Installation does not enable Falcond. Configure it and enable its service explic
 The Aitum plugins load the next time OBS Studio starts. Vertical and Multistream check `api.aitum.tv` for update notices, sending the plugin version and OBS's installation ID. Stream Suite's chat, activity and overlay docks load pages from Aitum's servers and need OBS's browser source. Its scene collection templates and Aitum theme are installed with it. Upstream builds these plugins with Qt private headers, so each plugin requires the exact Qt version it was built with and is rebuilt when Fedora's Qt changes.
 
 ```bash
-sudo dnf install obs-vertical-canvas obs-aitum-multistream obs-aitum-stream-suite
+sudo dnf install obs-studio-plugin-vertical-canvas obs-studio-plugin-aitum-multistream obs-studio-plugin-aitum-stream-suite
 ```
 
 Moonlight uses the system FFmpeg libraries. Available codecs and hardware decoding depend on the installed FFmpeg and GPU driver stack; keep the existing Nobara/RPM Fusion codec setup. It does not install Sunshine or enable a service. Launch `moonlight` and pair it with the host.

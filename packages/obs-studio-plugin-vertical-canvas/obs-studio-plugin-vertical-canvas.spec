@@ -1,9 +1,12 @@
-Name:           obs-vertical-canvas
+Name:           obs-studio-plugin-vertical-canvas
 Version:        1.6.7
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Vertical canvas for OBS Studio
 License:        GPL-2.0-only
 URL:            https://github.com/Aitum/obs-vertical-canvas
+# Same name as Nobara's package so newer releases upgrade it in place.
+Provides:       obs-vertical-canvas = %{version}-%{release}
+Obsoletes:      obs-vertical-canvas < %{version}-%{release}
 # Generated from the pinned upstream release commit in sources.json.
 Source0:        %{name}-%{version}.tar.gz
 ExclusiveArch:  x86_64
@@ -52,5 +55,8 @@ nm -D --defined-only %{buildroot}%{_libdir}/obs-plugins/vertical-canvas.so | gre
 %{_datadir}/obs/obs-plugins/vertical-canvas/
 
 %changelog
+* Sat Oct 31 2026 kamm3r - 1.6.7-2
+- Rename to the Nobara package name so it upgrades the installed plugin.
+
 * Sat Oct 31 2026 kamm3r - 1.6.7-1
 - Package the 1.6.7 release for Fedora OBS Studio.

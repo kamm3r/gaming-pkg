@@ -1,9 +1,12 @@
-Name:           obs-aitum-stream-suite
+Name:           obs-studio-plugin-aitum-stream-suite
 Version:        1.2.5
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Aitum Stream Suite plugin for OBS Studio
 License:        GPL-2.0-only
 URL:            https://github.com/Aitum/obs-aitum-stream-suite
+# Follows Nobara's obs-studio-plugin naming; replaces this session's earlier name.
+Provides:       obs-aitum-stream-suite = %{version}-%{release}
+Obsoletes:      obs-aitum-stream-suite < %{version}-%{release}
 # Generated from the pinned upstream release commit in sources.json.
 Source0:        %{name}-%{version}.tar.gz
 ExclusiveArch:  x86_64
@@ -54,5 +57,8 @@ nm -D --defined-only %{buildroot}%{_libdir}/obs-plugins/aitum-stream-suite.so | 
 %{_datadir}/obs/obs-studio/themes/Aitum_Default.ovt
 
 %changelog
+* Sat Oct 31 2026 kamm3r - 1.2.5-2
+- Rename to the Nobara package name so it upgrades the installed plugin.
+
 * Sat Oct 31 2026 kamm3r - 1.2.5-1
 - Package the 1.2.5 release for Fedora OBS Studio.
