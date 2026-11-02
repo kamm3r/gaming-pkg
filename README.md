@@ -40,13 +40,14 @@ The Aitum plugins load the next time OBS Studio starts. Vertical and Multistream
 sudo dnf install obs-studio-plugin-vertical-canvas obs-studio-plugin-aitum-multistream obs-studio-plugin-aitum-stream-suite
 ```
 
-On Nobara, `nobara-updates` (priority 50) takes precedence over this COPR (default priority 99), so a plain upgrade keeps Nobara's older Vertical and Multistream builds. Switch the installed copies explicitly:
+On Nobara, `nobara-updates` (priority 50) takes precedence over this COPR (default priority 99), regardless of version: a plain upgrade keeps Nobara's older Vertical and Multistream builds, and `dnf distro-sync` downgrades this COPR's builds back to them. Exclude the two packages from `nobara-updates`, keeping its existing `kernel*` exclusion, then switch:
 
 ```bash
-sudo dnf distro-sync --from-repo=copr:copr.fedorainfracloud.org:kammer:gaming obs-studio-plugin-vertical-canvas obs-studio-plugin-aitum-multistream
+sudo dnf config-manager setopt 'nobara-updates.excludepkgs=kernel*,obs-studio-plugin-vertical-canvas,obs-studio-plugin-aitum-multistream'
+sudo dnf distro-sync obs-studio-plugin-vertical-canvas obs-studio-plugin-aitum-multistream
 ```
 
-Later Nobara releases can replace them again on upgrade; exclude these two package names from `nobara-updates` to keep this COPR's builds. The Aitum plugins are published as COPR builds [11235622](https://copr.fedorainfracloud.org/coprs/build/11235622/), [11235623](https://copr.fedorainfracloud.org/coprs/build/11235623/) and [11235624](https://copr.fedorainfracloud.org/coprs/build/11235624/), with matching repository metadata. They have not been tested in a running OBS session. [Build record](.copr/publications/aitum-obs-plugins-2026-10-31.json).
+With the exclusion in place, these two plugins only update from this COPR. The Aitum plugins are published as COPR builds [11235622](https://copr.fedorainfracloud.org/coprs/build/11235622/), [11235623](https://copr.fedorainfracloud.org/coprs/build/11235623/) and [11235624](https://copr.fedorainfracloud.org/coprs/build/11235624/), with matching repository metadata. They have not been tested in a running OBS session. [Build record](.copr/publications/aitum-obs-plugins-2026-10-31.json).
 
 Moonlight uses the system FFmpeg libraries. Available codecs and hardware decoding depend on the installed FFmpeg and GPU driver stack; keep the existing Nobara/RPM Fusion codec setup. It does not install Sunshine or enable a service. Launch `moonlight` and pair it with the host.
 
